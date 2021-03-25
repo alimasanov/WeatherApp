@@ -40,67 +40,80 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.core:core-ktx:1.3.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    implementation 'androidx.browser:browser:1.2.0'
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.browser:browser:1.3.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 
     // Kotlin reflection
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     // Rx
-    implementation "io.reactivex.rxjava2:rxjava:2.2.19"
-    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
-    implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
+    def rxJavaVersion = "2.2.19"
+    def rxAndroidVersion = "2.1.1"
+    def rxKotlinVersion = "2.4.0"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
 
     //Moxy
-    implementation 'tech.schoolhelper:moxy-x:1.7.0'
-    implementation 'tech.schoolhelper:moxy-x-androidx:1.7.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    kapt 'tech.schoolhelper:moxy-x-compiler:1.7.0'
+    def moxyVersion = "1.7.0"
+    def legacySupport = "1.0.0"
+    implementation "tech.schoolhelper:moxy-x:$moxyVersion"
+    implementation "tech.schoolhelper:moxy-x-androidx:$moxyVersion"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupport"
+    kapt "tech.schoolhelper:moxy-x-compiler:$moxyVersion"
 
     // Dagger 2
-    implementation 'com.google.dagger:dagger:2.28'
-    kapt 'com.google.dagger:dagger-compiler:2.28'
+    def daggerVersion = "2.28"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
     // Network
-    implementation "com.squareup.okhttp3:okhttp:3.12.3"
-    implementation "com.squareup.okhttp3:logging-interceptor:3.12.3"
-    implementation "com.squareup.retrofit2:retrofit:2.6.3"
-    implementation "com.squareup.retrofit2:converter-gson:2.6.3"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:2.6.3"
+    def retrofitVersion = "2.6.3"
+    def okHttpVersion = "3.12.10"
+    def loggingVersion = "3.12.3"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$loggingVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
     // Cicerone
-    implementation 'com.github.terrakok:cicerone:6.6'
+    def ciceroneVersion = "6.6"
+    implementation "com.github.terrakok:cicerone:$ciceroneVersion"
 
     //Expandable layout
-    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
-
-    //RecyclerView adapter
-    implementation 'org.jetbrains.anko:anko:0.10.8'
-    implementation 'com.tomasznajda.simplerecyclerview:simplerecyclerview:1.1.1'
-    implementation 'com.ernestoyaquello.dragdropswiperecyclerview:drag-drop-swipe-recyclerview:0.6.0'
+    def expandableLayoutVersion = "2.9.2"
+    implementation "net.cachapa.expandablelayout:expandablelayout:$expandableLayoutVersion"
 
     // Glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    implementation "com.github.bumptech.glide:okhttp3-integration:4.6.1"
-    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    def glideVersion = "4.11.0"
+    def glideIntegrationVersion = "4.6.1"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$glideIntegrationVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
     // Room
-    implementation "androidx.room:room-runtime:2.2.5"
-    implementation "android.arch.persistence.room:rxjava2:1.1.1"
-    kapt "androidx.room:room-compiler:2.2.5"
+    def roomVersion = "2.2.6"
+    def roomRxVersion = "1.1.1"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "android.arch.persistence.room:rxjava2:$roomRxVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
 
     // shimmer
-    implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+    def shimmerVersion = "0.5.0@aar"
+    implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
 
     // RxPermissions
-    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    def rxPermissionsVersion = "0.10.2"
+    implementation "com.github.tbruyelle:rxpermissions:$rxPermissionsVersion"
 
     // RxLocation
-    implementation 'io.nlopez.smartlocation:rx:3.3.3'
+    def rxLocationVersion = "3.3.3"
+    implementation "io.nlopez.smartlocation:rx:$rxLocationVersion"
 
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
