@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+
+    <!-- ERRORS -->
+    <string name="error_parse">Can not parse </string>
+    <string name="error_unknown">unknown</string>
+    <string name="error_no_data">no data</string>
+    <string name="error_no_connection_title">Нет Интернет-соединения</string>
+    <string name="error_no_connection_description">Проверьте, пожалуйста, подключение к сети.</string>
+    <string name="error_unknown_title">Что-то пошло не так</string>
+    <string name="error_try_later">Попробуйте подключиться позже</string>
+
 </resources>
